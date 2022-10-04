@@ -16,5 +16,8 @@ public class Main {
         Buses puv = new Buses("Noy", "hop", 5.5);
         Buses asd = new Buses("Wur", "hfhhhh", 2.5);
 
+        asd.pitStop();
+        System.out.println(honda.pitStop());
+        honda.bestLapTime(200);
     }
 }
