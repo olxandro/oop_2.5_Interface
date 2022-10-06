@@ -1,4 +1,22 @@
 public class Trucks extends Cars implements Competing{
+    public enum CompetingCapacity{
+        N1(3.5),
+        N2(3.5-12),
+        N3(12);
+        public double  loadCapacity;
+
+        CompetingCapacity(double loadCapacity) {
+            this.loadCapacity = loadCapacity;
+        }
+
+        public double getLoadCapacity() {
+            return loadCapacity;
+        }
+
+        public void setLoadCapacity(double loadCapacity) {
+            this.loadCapacity = loadCapacity;
+        }
+    }
     public Trucks(String brand, String model, Double engineVolume) {
         super(brand, model, engineVolume);
     }

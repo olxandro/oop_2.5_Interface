@@ -1,7 +1,31 @@
 public class Buses extends Cars implements Competing {
+
+    public enum CompetingCapacity{
+        EXTRA_SMALL(10),
+        SMALL(25),
+        MEDIUM(40-50),
+        LARGE(60-80),
+        EXTRA_LARGE(100-120);
+
+        private int typeCapacity;
+
+        CompetingCapacity(int typeCapacity) {
+            this.typeCapacity = typeCapacity;
+        }
+
+        public int getTypeCapacity() {
+            return typeCapacity;
+        }
+
+        public void setTypeCapacity(int typeCapacity) {
+            this.typeCapacity = typeCapacity;
+        }
+
+
+    }
+
     public Buses(String brand, String model, Double engineVolume) {
         super(brand, model, engineVolume);
-
     }
 
     @Override

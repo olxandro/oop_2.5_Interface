@@ -1,4 +1,24 @@
 public class PassengerCars extends Cars implements Competing {
+    public enum TypeBody {SEDAN, HATCHBACK, COPE, STATION, WAGON, SUV,
+        CROSSOVER, PICKUP, TRUCK, VON, MINIVAN;}
+
+    public TypeBody determineTypeCar(TypeBody com){
+        if (com == null) {
+            System.out.println( "Тип авто не определен! Данных недостаточно");
+        }
+        return com;
+    }
+
+    public String bodyType;
+
+        public String getBodyType() {
+            return bodyType;
+        }
+
+        public void setBodyType(String bodyType) {
+            this.bodyType = bodyType;
+        }
+
 
     public PassengerCars(String brand, String model, Double engineVolume) {
         super(brand, model, engineVolume);
