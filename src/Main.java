@@ -19,5 +19,9 @@ public class Main {
         asd.pitStop();
         System.out.println(honda.pitStop());
         honda.bestLapTime(200);
+
+        Driver_B<PassengerCars> vova = new Driver_B<>("Владимиров Владимир Владимирович", true, 2);
+        vova.drivingStart();
+        vova.printDriver(lada);
     }
 }

@@ -27,4 +27,9 @@ public class Trucks extends Cars implements Competing{
     public void maxSpeed(int speed) {
         System.out.println("Максимальная скорость грузовика" + speed);
     }
+
+    @Override
+    public String toString() {
+        return getBrand();
+    }
 }
