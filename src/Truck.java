@@ -1,4 +1,4 @@
-public class Trucks extends Cars implements Competing{
+public class Truck extends Car implements Competing{
     public enum CompetingCapacity{
         N1(3.5),
         N2(3.5-12),
@@ -17,7 +17,7 @@ public class Trucks extends Cars implements Competing{
             this.loadCapacity = loadCapacity;
         }
     }
-    public Trucks(String brand, String model, Double engineVolume) {
+    public Truck(String brand, String model, Double engineVolume) {
         super(brand, model, engineVolume);
     }
 

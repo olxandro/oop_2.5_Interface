@@ -1,4 +1,4 @@
-public class PassengerCars extends Cars implements Competing {
+public class PassengerCar extends Car implements Competing {
     public enum TypeBody {SEDAN, HATCHBACK, COPE, STATION, WAGON, SUV,
         CROSSOVER, PICKUP, TRUCK, VON, MINIVAN;}
 
@@ -20,7 +20,7 @@ public class PassengerCars extends Cars implements Competing {
         }
 
 
-    public PassengerCars(String brand, String model, Double engineVolume) {
+    public PassengerCar(String brand, String model, Double engineVolume) {
         super(brand, model, engineVolume);
     }
 

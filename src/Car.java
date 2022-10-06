@@ -1,12 +1,12 @@
 import java.util.Objects;
 
-public abstract class Cars {
+public abstract class Car {
 
     private String brand;
     private String model;
     private Double engineVolume;
 
-    public Cars(String brand, String model, Double engineVolume) {
+    public Car(String brand, String model, Double engineVolume) {
         this.brand = Objects.requireNonNullElse(brand, "Lada");
         this.model = Objects.requireNonNullElse(model, "cabri");
         this.engineVolume = Objects.requireNonNullElse(engineVolume, 1.5);

@@ -1,7 +1,7 @@
-public class Driver_D <D extends Cars> extends Driver{
+public class DriverD<D extends Car> extends Driver{
 
 
-    public Driver_D(String fio, Boolean rights, int experience) {
+    public DriverD(String fio, Boolean rights, int experience) {
         super(fio, rights, experience);
     }
 
@@ -22,7 +22,7 @@ public class Driver_D <D extends Cars> extends Driver{
 
     }
 
-    public void printDriver(Buses buses){
-        System.out.println("Водитель " + fio + " управляет автомобилем " + buses + " и будет учавствовать в заезде." );
+    public void printDriver(Bus bus){
+        System.out.println("Водитель " + fio + " управляет автомобилем " + bus + " и будет учавствовать в заезде." );
     }
 }
