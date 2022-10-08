@@ -1,7 +1,7 @@
-public class DriverB<B extends Car> extends Driver{
+public class DriverB extends Driver<PassengerCar>{
 
-    public DriverB(String fio, Boolean rights, int experience) {
-        super(fio, rights, experience);
+    public DriverB(String fio, Boolean rights, int experience, PassengerCar car) {
+        super(fio, rights, experience, car);
     }
 
     @Override

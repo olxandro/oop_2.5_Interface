@@ -1,7 +1,7 @@
-public class DriverC<С extends Car> extends Driver {
+public class DriverC extends Driver <Truck>{
 
-    public DriverC(String fio, Boolean rights, int experience) {
-        super(fio, rights, experience);
+    public DriverC(String fio, Boolean rights, int experience, Truck car) {
+        super(fio, rights, experience, car);
     }
 
     @Override

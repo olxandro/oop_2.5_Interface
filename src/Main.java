@@ -20,7 +20,7 @@ public class Main {
         System.out.println(honda.pitStop());
         honda.bestLapTime(200);
 
-        DriverB<PassengerCar> vova = new DriverB<>("Владимиров Владимир Владимирович", true, 2);
+        DriverB vova = new DriverB("Владимиров Владимир Владимирович", true, 2, lada);
         vova.drivingStart();
         vova.printDriver(lada);
         lada.determineTypeCar(PassengerCar.TypeBody.SEDAN);

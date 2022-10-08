@@ -1,12 +1,14 @@
-public abstract class Driver {
+public abstract class Driver<A extends Car> {
     public String fio;
     public Boolean rights;
     public int experience;
+    public A car;
 
-    public Driver(String fio, Boolean rights, int experience) {
+    public Driver(String fio, Boolean rights, int experience, A car) {
         this.fio = fio;
         this.rights = rights;
         this.experience = experience;
+        this.car = car;
     }
 
     public String getFio() {
@@ -31,6 +33,14 @@ public abstract class Driver {
 
     public void setExperience(int experience) {
         this.experience = experience;
+    }
+
+    public A getCar() {
+        return car;
+    }
+
+    public void setCar(A car) {
+        this.car = car;
     }
 
     public abstract void drivingStart();
