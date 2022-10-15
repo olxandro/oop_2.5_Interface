@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class PassengerCar extends Car implements Competing {
     public enum TypeBody {SEDAN, HATCHBACK, COPE, STATION, WAGON, SUV,
         CROSSOVER, PICKUP, TRUCK, VON, MINIVAN;}
@@ -35,8 +37,14 @@ public class PassengerCar extends Car implements Competing {
     }
 
     @Override
-    public void makeDiagnostics() {
-        System.out.println("Легковой автомобиль " + getBrand() + " проходит диагностику");
+    public void makeDiagnostics() throws DiagnosticsException {
+        System.out.println("Легковой автомобиль " + getBrand() + " проходит диагностику...");
+        boolean yesOrNo = new Random().nextBoolean();
+        if (yesOrNo) {
+            System.out.println("Диагностика прошла успешно!");
+        } else {
+            throw new DiagnosticsException("Диагностика не пройдена. Срочно обратитесь в сервисный центр.");
+        }
     }
 
     @Override

@@ -1,5 +1,5 @@
 public class Main {
-    public static void main(String[] args) throws BusDiagnosticsException, IllegalAccessException {
+    public static void main(String[] args) throws DiagnosticsException, IllegalAccessException {
 
         PassengerCar lada = new PassengerCar("Lada", null, 1.6);
         PassengerCar hatchback = new PassengerCar(" Ford Mondeo", null, 2.2);
@@ -25,6 +25,7 @@ public class Main {
         vova.printDriver(lada);
         lada.determineTypeCar(PassengerCar.TypeBody.SEDAN);
 
+        agh.makeDiagnostics();
         lada.makeDiagnostics();
     }
 }

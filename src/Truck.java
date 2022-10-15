@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Truck extends Car implements Competing{
     public enum CompetingCapacity{
         N1(3.5),
@@ -32,8 +34,14 @@ public class Truck extends Car implements Competing{
     }
 
     @Override
-    public void makeDiagnostics() throws BusDiagnosticsException {
+    public void makeDiagnostics() throws DiagnosticsException {
         System.out.println("Грузовик " + getBrand() + " проходит диагностику");
+        boolean yesOrNo = new Random().nextBoolean();
+        if (yesOrNo) {
+            System.out.println("Диагностика прошла успешно!");
+        } else {
+            throw new DiagnosticsException("Диагностика не пройдена. Срочно обратитесь в сервисный центр.");
+        }
     }
 
     @Override
