@@ -1,12 +1,13 @@
 public abstract class Driver<A extends Car> {
     public String fio;
-    public Boolean rights;
+    public String rights;
     public int experience;
     public A car;
 
-    public Driver(String fio, Boolean rights, int experience, A car) {
+    public Driver(String fio, String rights, int experience, A car) throws IllegalAccessException {
         this.fio = fio;
         this.rights = rights;
+        setRights(rights);
         this.experience = experience;
         this.car = car;
     }
@@ -19,12 +20,16 @@ public abstract class Driver<A extends Car> {
         this.fio = fio;
     }
 
-    public Boolean getRights() {
+    public String getRights() {
         return rights;
     }
 
-    public void setRights(Boolean rights) {
-        this.rights = rights;
+    public void setRights(String  rights) throws IllegalAccessException {
+        if (rights.matches("^[B,C,D]{1,1}$")) {
+            this.rights = rights;
+        } else {
+            throw  new IllegalAccessException("Укажите тип прав!");
+        }
     }
 
     public int getExperience() {

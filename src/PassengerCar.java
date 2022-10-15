@@ -35,6 +35,11 @@ public class PassengerCar extends Car implements Competing {
     }
 
     @Override
+    public void makeDiagnostics() {
+        System.out.println("Легковой автомобиль " + getBrand() + " проходит диагностику");
+    }
+
+    @Override
     public String pitStop() {
         return "Легковой автомобиль заезжает на пит стоп!";
     }

@@ -37,6 +37,11 @@ public class Bus extends Car implements Competing {
     }
 
     @Override
+    public void makeDiagnostics() throws BusDiagnosticsException {
+        throw new BusDiagnosticsException("Автобус " + getBrand() + " в диагностике не требуется");
+    }
+
+    @Override
     public String pitStop() {
         return "Автобус заезжает на пит стоп!";
     }

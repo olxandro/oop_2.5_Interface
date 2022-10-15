@@ -39,4 +39,6 @@ public abstract class Car {
     public abstract void startMoving();
 
     public abstract void finishMoving();
+
+    public abstract void makeDiagnostics() throws BusDiagnosticsException;
 }

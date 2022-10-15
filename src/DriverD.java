@@ -1,7 +1,7 @@
 public class DriverD extends Driver<Bus>{
 
 
-    public DriverD(String fio, Boolean rights, int experience, Bus car) {
+    public DriverD(String fio, String rights, int experience, Bus car) throws IllegalAccessException {
         super(fio, rights, experience, car);
     }
 

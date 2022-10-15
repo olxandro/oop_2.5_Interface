@@ -1,5 +1,5 @@
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws BusDiagnosticsException, IllegalAccessException {
 
         PassengerCar lada = new PassengerCar("Lada", null, 1.6);
         PassengerCar hatchback = new PassengerCar(" Ford Mondeo", null, 2.2);
@@ -20,9 +20,11 @@ public class Main {
         System.out.println(honda.pitStop());
         honda.bestLapTime(200);
 
-        DriverB vova = new DriverB("Владимиров Владимир Владимирович", true, 2, lada);
+        DriverB vova = new DriverB("Владимиров Владимир Владимирович", "B", 2, lada);
         vova.drivingStart();
         vova.printDriver(lada);
         lada.determineTypeCar(PassengerCar.TypeBody.SEDAN);
+
+        lada.makeDiagnostics();
     }
 }

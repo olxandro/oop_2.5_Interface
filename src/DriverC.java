@@ -1,6 +1,6 @@
 public class DriverC extends Driver <Truck>{
 
-    public DriverC(String fio, Boolean rights, int experience, Truck car) {
+    public DriverC(String fio, String rights, int experience, Truck car) throws IllegalAccessException {
         super(fio, rights, experience, car);
     }
 

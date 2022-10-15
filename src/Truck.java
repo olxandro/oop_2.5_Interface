@@ -32,6 +32,11 @@ public class Truck extends Car implements Competing{
     }
 
     @Override
+    public void makeDiagnostics() throws BusDiagnosticsException {
+        System.out.println("Грузовик " + getBrand() + " проходит диагностику");
+    }
+
+    @Override
     public String pitStop() {
         return "Грузовой автомобиль заезжает на пит стоп!";
     }
