@@ -1,10 +1,10 @@
 public class Main {
     public static void main(String[] args) throws DiagnosticsException, IllegalAccessException {
 
-        PassengerCar lada = new PassengerCar("Lada", null, 1.6);
-        PassengerCar hatchback = new PassengerCar(" Ford Mondeo", null, 2.2);
-        PassengerCar Convertible = new PassengerCar(" Ford Windsta", null, 1.1);
-        PassengerCar Sedans = new PassengerCar("Opel Omega", null, 2.6);
+        PassengerCar lada = new PassengerCar("Lada", null, 1.6, PassengerCar.TypeBody.SEDAN);
+        PassengerCar mond = new PassengerCar(" Ford Mondeo", null, 2.2, PassengerCar.TypeBody.COPE);
+        PassengerCar ford = new PassengerCar(" Ford Windsta", null, 1.1, PassengerCar.TypeBody.MINIVAN);
+        PassengerCar opel = new PassengerCar("Opel Omega", null, 2.6, PassengerCar.TypeBody.CROSSOVER);
 
         Truck boo = new Truck("Volvo", "Byl", 5.2);
         Truck Carry = new Truck("Fap", "Reg", 6.2);
@@ -28,6 +28,12 @@ public class Main {
         agh.makeDiagnostics();
         lada.makeDiagnostics();
 
+        Sponsor alfa = new Sponsor("ALfa", 15000);
+        Sponsor omega = new Sponsor("Omega", 15000);
+        Sponsor dublin = new Sponsor("Dublin", 15000);
 
+        DriverB petr = new DriverB("PTE", "BCE", 1, mond);
+        DriverB Vasia = new DriverB("VSA", "BC", 1, mond);
+        DriverB kolia = new DriverB("NKT", "B", 1, mond);
     }
 }

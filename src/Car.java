@@ -9,6 +9,7 @@ public abstract class Car {
     private Double engineVolume;
     private Driver driver;
     private List<Sponsor> sponsors = new ArrayList<>();
+    private List<Driver> drivers = new ArrayList<>();
     private List<Mechaniс> mechaniсs = new ArrayList<>();
 
     public Car(String brand, String model, Double engineVolume) {
@@ -63,4 +64,14 @@ public abstract class Car {
     }
 
     public abstract void makeDiagnostics() throws DiagnosticsException;
+
+    public void addDriver(Driver driver) {
+        drivers.add(driver);
+    }
+    public void addSponsor(Sponsor sponsor) {
+        sponsors.add(sponsor);
+    }
+    public void addMechanic(Mechaniс<?> mechaniс) {
+        mechaniсs.add(mechaniс);
+    }
 }

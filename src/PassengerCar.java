@@ -11,19 +11,15 @@ public class PassengerCar extends Car implements Competing {
         return com;
     }
 
-    public String bodyType;
+    public TypeBody bodyType;
 
-        public String getBodyType() {
-            return bodyType;
-        }
+    public TypeBody getBodyType() {
+        return bodyType;
+    }
 
-        public void setBodyType(String bodyType) {
-            this.bodyType = bodyType;
-        }
-
-
-    public PassengerCar(String brand, String model, Double engineVolume) {
+    public PassengerCar(String brand, String model, Double engineVolume, TypeBody bodyType) {
         super(brand, model, engineVolume);
+        this.bodyType = bodyType;
     }
 
     @Override
