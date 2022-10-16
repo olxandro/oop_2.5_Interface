@@ -27,5 +27,7 @@ public class Main {
 
         agh.makeDiagnostics();
         lada.makeDiagnostics();
+
+
     }
 }

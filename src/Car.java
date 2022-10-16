@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public abstract class Car {
@@ -5,6 +7,9 @@ public abstract class Car {
     private String brand;
     private String model;
     private Double engineVolume;
+    private Driver driver;
+    private List<Sponsor> sponsors = new ArrayList<>();
+    private List<Mechaniс> mechaniсs = new ArrayList<>();
 
     public Car(String brand, String model, Double engineVolume) {
         this.brand = Objects.requireNonNullElse(brand, "Lada");
@@ -36,9 +41,26 @@ public abstract class Car {
         this.engineVolume = engineVolume;
     }
 
+    public Driver getDriver() {
+        return driver;
+    }
+
+    public List<Sponsor> getSponsors() {
+        return sponsors;
+    }
+
+    public List<Mechaniс> getMechaniсs() {
+        return mechaniсs;
+    }
+
     public abstract void startMoving();
 
     public abstract void finishMoving();
+
+    public void takeInfo() {
+        System.out.println("Водитель - " + getDriver().getFio() + ", спонсоры - " + getSponsors() +
+                " механики - " + getMechaniсs());
+    }
 
     public abstract void makeDiagnostics() throws DiagnosticsException;
 }
