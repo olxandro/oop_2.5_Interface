@@ -1,3 +1,8 @@
+import java.util.LinkedList;
+import java.util.PriorityQueue;
+import java.util.Queue;
+import java.util.Random;
+
 public class Main {
     public static void main(String[] args) throws DiagnosticsException, IllegalAccessException {
 
@@ -35,5 +40,39 @@ public class Main {
         DriverB petr = new DriverB("PTE", "BCE", 1, mond);
         DriverB Vasia = new DriverB("VSA", "BC", 1, mond);
         DriverB kolia = new DriverB("NKT", "B", 1, mond);
+
+
+        Queue<String> queue1 = new LinkedList<>();
+        Queue<String> queue2 = new LinkedList<>();
+        for (int i = 0; i < Math.floor(Math.random() * 5); i++) {
+            queue1.offer("Mike" + i);
+        }
+        for (int i = 0; i < Math.floor(Math.random() * 5); i++) {
+            queue2.offer("Test" + i);
+        }
+        System.out.println(queue1);
+        System.out.println(queue2);
+    }
+
+    static void addStringToQueue(String name, Queue<String> q1, Queue<String> q2) {
+        if (q1.size() == q2.size() && q1.size() == 5) {
+            System.out.println("Позовите Галю!");
+            return;
+        }
+        if (q2.size() < q1.size()) {
+            q2.add(name);
+        }
+        if (q2.size() > q1.size()) {
+            q1.add(name);
+        }
+        System.out.println(q1.size());
+        System.out.println(q2.size());
+    }
+    static void removeFromTheRandomQueue(Queue<String> q1, Queue<String> q2) {
+        if (new Random().nextBoolean()) {
+            q1.poll();
+        } else {
+            q2.poll();
+        }
     }
 }
