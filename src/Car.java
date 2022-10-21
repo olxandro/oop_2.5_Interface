@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 public abstract class Car {
 
@@ -8,9 +6,9 @@ public abstract class Car {
     private String model;
     private Double engineVolume;
     private Driver driver;
-    private List<Sponsor> sponsors = new ArrayList<>();
-    private List<Driver> drivers = new ArrayList<>();
-    private List<Mechaniс> mechaniсs = new ArrayList<>();
+    private Set<Sponsor> sponsors = new HashSet<>();
+    private Set<Driver> drivers = new HashSet<>();
+    private Set<Mechaniс> mechaniсs = new HashSet<>();
 
     public Car(String brand, String model, Double engineVolume) {
         this.brand = Objects.requireNonNullElse(brand, "Lada");
@@ -46,11 +44,11 @@ public abstract class Car {
         return driver;
     }
 
-    public List<Sponsor> getSponsors() {
+    public Set<Sponsor> getSponsors() {
         return sponsors;
     }
 
-    public List<Mechaniс> getMechaniсs() {
+    public Set<Mechaniс> getMechaniсs() {
         return mechaniсs;
     }
 
@@ -73,5 +71,18 @@ public abstract class Car {
     }
     public void addMechanic(Mechaniс<?> mechaniс) {
         mechaniсs.add(mechaniс);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Car)) return false;
+        Car car = (Car) o;
+        return Objects.equals(brand, car.brand) && Objects.equals(model, car.model) && Objects.equals(engineVolume, car.engineVolume) && Objects.equals(driver, car.driver) && Objects.equals(sponsors, car.sponsors) && Objects.equals(drivers, car.drivers) && Objects.equals(mechaniсs, car.mechaniсs);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(brand, model, engineVolume, driver, sponsors, drivers, mechaniсs);
     }
 }

@@ -1,4 +1,4 @@
-public class Mechaniс <C extends Car> {
+public class Mechaniс <A extends Car> {
     private String name;
     private String surName;
     private String companyName;
